@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardComponent from './CardComponent'
 
-class Tumblr extends Component {
+class TechCrunch extends Component {
   constructor(props) {
     super(props)
     this.state = {
