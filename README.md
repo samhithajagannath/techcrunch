@@ -9,7 +9,11 @@ There is a login page setup with demo login credentials.
 ###To Run
 Hit this in console-
 ```
+cd techcrunch
+npm start
+
+cd techcrunch/client
 npm start
 ```
 
-and open your browser- `http://localhost:5000`
+and open your browser- `http://localhost:3000`
