@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/feed', (req, res) => {
 
-let apikey = "";
+let apikey = "09bc1b5b9ddb4123a4d9386baf3cd9b0";
 let options = {
         method: 'GET',
         url: 'https://newsapi.org/v2/everything?sources=techcrunch&apiKey='+apikey,
@@ -28,8 +28,8 @@ let options = {
     });
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/build/index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 const port = 5000;

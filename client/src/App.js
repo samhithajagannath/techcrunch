@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import TechCrunch from './TechCrunch.js'
-import Login from './Login.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Login from './Login'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <MuiThemeProvider style={{ "justify-content": "center"}}>
-          //<Login />
-          <TechCrunch />
+          <Login />
         </MuiThemeProvider>
       </div>
     );
