@@ -9,6 +9,10 @@ class TechCrunch extends Component {
     }
   }
 
+  handleClick = () => {
+    
+  }
+
   render() {
     return (
       <div>
@@ -22,7 +26,7 @@ class TechCrunch extends Component {
             hintText="password"
           /><br />
           <br />
-          <RaisedButton label="Default" style={style}/>
+          <RaisedButton label="Default" style={style} onClick={this.handleClick}/>
         </div>
       </div>
     )
