@@ -6,7 +6,7 @@ class Tumblr extends Component {
     super(props)
     this.state = {
       requestFailed: false,
-      }
+    }
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class Tumblr extends Component {
       })
       .then(d => d.json())
       .then(d => {
-        console.log(d);
+        //console.log(d);
         this.setState({
           techcrunchfeed: d
         })
@@ -34,35 +34,34 @@ class Tumblr extends Component {
   render() {
     if (this.state.requestFailed) return <p>Failed!</p>
     if (!this.state.techcrunchfeed) return <p>Loading...</p>
-      let posts = this.state.techcrunchfeed.articles;
-      let cards = []
-      let i = 0;
-      for(var post of posts) {
-              var obj ={}
-              obj.id = i
-               obj.title = post.title
-                obj.image = post.urlToImage
-                obj.url = post.url
-                obj.date = post.publishedAt
-                obj.author = post.author
-                obj.source_name = post.source.name
-                obj.blog_name = post.blog_name
-                obj.content = post.description
 
-               cards.push(<CardComponent key={i} data={obj}/>)
-                i++;
-        }
-      return (
-        <div>
-          <h1>Techcrunch Feeds</h1>
-           <center>
-            {cards}
-          </center>
-        </div>
-      )
+    let posts = this.state.techcrunchfeed.articles;
+    let cards = []
+    let i = 0;
+    for(var post of posts) {
+      var obj ={}
+      obj.id = i
+      obj.title = post.title
+      obj.image = post.urlToImage
+      obj.url = post.url
+      obj.date = post.publishedAt
+      obj.author = post.author
+      obj.source_name = post.source.name
+      obj.blog_name = post.blog_name
+      obj.content = post.description
+
+      cards.push(<CardComponent key={i} data={obj}/>)
+      i++;
     }
+    return (
+      <div>
+        <h1>Techcrunch Feeds</h1>
+         <center>
+          {cards}
+        </center>
+      </div>
+    )
   }
+}
 
 export default TechCrunch;
-
-
