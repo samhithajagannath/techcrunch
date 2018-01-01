@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/feed', (req, res) => {
 
-let apikey = "09bc1b5b9ddb4123a4d9386baf3cd9b0";
+let apikey = "";
 let options = {
         method: 'GET',
         url: 'https://newsapi.org/v2/everything?sources=techcrunch&apiKey='+apikey,
