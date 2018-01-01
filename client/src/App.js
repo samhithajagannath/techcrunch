@@ -9,7 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <MuiThemeProvider style={{ "justify-content": "center"}}>
-          <TechCrunch username="jackfranklin"></TechCrunch>
+          //<Login />
+          <TechCrunch />
         </MuiThemeProvider>
       </div>
     );
